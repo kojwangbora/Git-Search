@@ -8,6 +8,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { UsersComponent } from './users/users.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,13 @@ import { UsersComponent } from './users/users.component';
     NotfoundComponent,
     RepositoriesComponent,
     SearchFormComponent,
-    UsersComponent
+    UsersComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
