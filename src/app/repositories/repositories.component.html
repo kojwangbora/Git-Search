@@ -1,21 +1,21 @@
 <div class="container-fluid">
-<div class="container">
-    <div class="container allrepos">
-        <div class="card" appHiglight *ngFor="let repository of repo" style="width: 400px;" class="repo">
-            <div class="card-body">
-                <h4> Repository Name: &nbsp;{{repository.name}}</h4>
-                <hr>
-                <div class="describe-repo"><strong>Description:</strong>&nbsp;{{repository.description}}</div>
-                <hr>
-                <h4>Crated On: &nbsp;{{repository.created_at|date}}</h4>
-                <div class="card-footer">
-                    <button class="btn btn-sm btn-warning" id="visit">View repo<a href="{{repository.html}}"></a></button>
-                    <button class="btn btn-sm btn-success" id="watchers">Counts &nbsp;{{repository.watchers_count}}</button>
-                    <button class="btn btn-sm btn-danger" id="forks">forks &nbsp; {{repository.forks}}</button>
+    <div class="container">
+        <div class="container allrepos">
+            <div class="card" appHiglight *ngFor="let repository of repo" style="width: 400px;" class="repo">
+                <div class="card-body">
+                    <h4> Repository Name: &nbsp;{{repository.name}}</h4>
+                    <hr>
+                    <div class="describe-repo"><strong>Description:</strong>&nbsp;{{repository.description}}</div>
+                    <hr>
+                    <h4>Crated On: &nbsp;{{repository.created_at|date}}</h4>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-warning" id="visit">View repo<a href="{{repository.html}}"></a></button>
+                        <button class="btn btn-sm btn-success" id="watchers">Counts &nbsp;{{repository.watchers_count}}</button>
+                        <button class="btn btn-sm btn-danger" id="forks">forks &nbsp; {{repository.forks}}</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <!-- <p>repositories works!</p> -->
