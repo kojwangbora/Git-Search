@@ -1,0 +1,13 @@
+ *{
+     font-family: 'Times New Roman', Times, serif;
+ }
+ .nav-item{
+     border: solid 1px white;
+     background-color: transparent;
+     border-radius: 10px;
+     
+ }
+ #links{
+     margin-right:20px;
+ }
+ 

@@ -1,1 +1,40 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">   
+        <a class="navbar-brand" routerLink="user-profile"><b>Git Search</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScontent">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" id= "links" routerLink="user-profile" routerLinkActive='active'>Search Users<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" routerLink="search-repo" routerLinkActive='active'>Search Repository</a>
+            </div>
+        </div>
+    
+    </div>
+</nav>
+
+
+
+
+
+
+<!-- <nav class="navbar-expand-lg fixed-top  navbar-dark py-3 bg-secondary"> 
+    <a class="navbar-brand"routerLink="user-profile"><b>Git Search</b></a>
+    <button class="navbar-toggler" type="button" routerLinkActive='active' data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collpse" id="navbarScontent">
+        <ul class="navbar">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive='active' routerLink="user-profile">Search Users<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive='active' routerLink="search-repo">Search Repository</a>
+            </li>
+        </ul>
+
+    </div>
+
+</nav>  -->
+ 
