@@ -9,6 +9,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     RepositoriesComponent,
     SearchFormComponent,
     UsersComponent,
+    HighlightDirective,
     
   ],
   imports: [
