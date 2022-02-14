@@ -10,6 +10,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightDirective } from './highlight.directive';
+import { DatePipePipe } from './date-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HighlightDirective } from './highlight.directive';
     SearchFormComponent,
     UsersComponent,
     HighlightDirective,
+    DatePipePipe,
     
   ],
   imports: [
