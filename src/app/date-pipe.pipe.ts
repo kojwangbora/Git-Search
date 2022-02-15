@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { interval } from 'rxjs';
 
 @Pipe({
   name: 'datePipe'
@@ -9,20 +8,19 @@ export class DatePipePipe implements PipeTransform {
   transform(value: any, ...args: any[]): any {
     if (value) {
       const seconds = Math.floor((+new Date() - +new Date(value)) / 1000);
-      if (seconds < 29)
-      return 'Just now';
-      const intervals = {
-        'year': 31536000,
-        'month': 2592000,
-        'week': 604800,
-        'day': 86400,
-        'hour': 3600,
-        'minute': 60,
-        'second': 1
-      };
+      if (seconds < 29) return 'Just now';
+      const intervals = [
+        { name: 'year', time: 31536000 },
+        { name: 'month', time: 2592000 },
+        { name: 'week', time: 604800 },
+        { name: 'day', time: 86400 },
+        { name: 'hour', time: 36000 },
+        { name: 'minute', time: 60 },
+        { name: 'second', time: 1},
+      ];
       let counter;
       for (const i in intervals) {
-        counter = Math.floor(seconds/ intervals[i]);
+        counter = Math.floor(seconds / intervals[i].time);
         if (counter > 0)
         if (counter === 1) {
           return counter + ' ' + i + ' ago';
