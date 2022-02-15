@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Repos} from './repos';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 import { error } from '@angular/compiler/src/util';
 
@@ -17,8 +17,8 @@ export class UserserviceService {
   foundUser: User;
   allRepos: Repos;
 
-  constructor( private http: HttpClientModule) {
-    this.foundUser = new User("", "", "", 0,0,0,"",new Date);
+  constructor( private http:HttpClient) {
+    this.foundUser = new User("", "","", "", 0,0,0,"",new Date);
     this.allRepos = new Repos("","","",new Date,0,0,"");
    }
    searchUser(searchName: string){
@@ -38,12 +38,12 @@ export class UserserviceService {
 
     return new Promise<void>((resolve, reject)=>{
       this.http.get<Response>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiToken).toPromise().then(
-        (result: User)=>{
+        (result:any)=>{
           this.foundUser = result;
           console.log(this.foundUser);
           resolve();
         },
-        (error: any)=>{
+        (error)=>{
           console.log(error);
           reject();
         }
@@ -62,11 +62,11 @@ export class UserserviceService {
      }
      return new Promise<void>((resolve, reject)=>{
        this.http.get<Repos>('https://api.githib.com/users/'+searchName+"/repos?order=created&sort=asc?access_token="+environment.apiToken).toPromise().then(
-         (results: Repos)=>{
+         (results: any)=>{
            this.allRepos = results;
            resolve();
          },
-         (error: any)=>{
+         (error)=>{
            console.log(error);
            reject();
          }
