@@ -1,0 +1,16 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+.card-body .Gs{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.card-body h6{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.user{
+    margin-left: 10%;
+    /* background-color: ; */
+}
