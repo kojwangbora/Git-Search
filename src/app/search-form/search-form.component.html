@@ -2,9 +2,12 @@
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <form class="form form-inline active-cyan-4">
-                <input class="form-control form-control-sm mr-4 w-50" type="text" placeholder="Enter github username" name="searchName" [(ngModel)]="searchName" aria-label="Search">
-                <button class="btn btn-information btn-md bg-dark text-light mt-2" (click)= "search()">Search</button>
+            <form class="form form-inline  d-flex active-cyan-4">
+                <input class="form-control form-control-sm mt-4 mb-4 w-50" type="text" placeholder="Enter github username" name="searchName" [(ngModel)]="searchName" aria-label="Search">
+                <div class="search">
+                    <button class="btn btn-information btn-md bg-dark text-light mt-3 " (click)= "search()">Search</button>
+                </div>
+                
             </form>
         </div>
         <div class="col-md-2"></div>
