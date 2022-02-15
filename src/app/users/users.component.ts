@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
 
   searchs(searchName: string) {
     this.myService.searchUser(searchName).then(
-      (_success)=>{
+      (success)=>{
         this.user = this.myService.foundUser;
       },
       (error)=>{
@@ -24,7 +24,7 @@ export class UsersComponent implements OnInit {
     );
     this.repoService.getRepository(searchName).then(
 
-      (_results: any)=>{
+      (results: any)=>{
         this.repos = this.repoService.allRepos
         console.log(this.repos);
       },

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Repos } from '../repos';
 import { UserserviceService } from '../userservice.service';
+
 
 @Component({
   selector: 'app-repositories',
@@ -7,7 +9,7 @@ import { UserserviceService } from '../userservice.service';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-  repo: any;
+  repo: Repos|any;
 
   constructor( public repoService:UserserviceService) { }
 
@@ -23,7 +25,7 @@ export class RepositoriesComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void{
+  ngOnInit(){
     this.repoSearch('kojwangbora');
   }
 

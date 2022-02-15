@@ -11,9 +11,6 @@ import { error } from '@angular/compiler/src/util';
   providedIn: 'root'
 })
 export class UserserviceService {
-  getRepos(searchName: string) {
-    throw new Error('Method not implemented.');
-  }
   foundUser: User;
   allRepos: Repos;
 
@@ -24,15 +21,15 @@ export class UserserviceService {
    searchUser(searchName: string){
 
     interface Responce {
-      url: string,
-      login: string;
-      html_url: string;
-      location:string;
-      public_repos:number;
-      followers:number;
-      following:number;
-      avatar_url:string;
-      created_at:Date;
+      url: any;
+      login: any;
+      html_url: any;
+      location:any;
+      public_repos:any;
+      followers:any;
+      following:any;
+      avatar_url:any;
+      created_at:any;
 
     }
 
