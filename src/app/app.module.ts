@@ -11,6 +11,8 @@ import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightDirective } from './highlight.directive';
 import { DatePipePipe } from './date-pipe.pipe';
+import { UserserviceService } from './userservice.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { DatePipePipe } from './date-pipe.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UserserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

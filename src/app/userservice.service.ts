@@ -37,7 +37,7 @@ export class UserserviceService {
     }
 
     return new Promise<void>((resolve, reject)=>{
-      this.http.get<Response>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiKey).toPromise().then(
+      this.http.get<Response>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiToken).toPromise().then(
         (result: User)=>{
           this.foundUser = result;
           console.log(this.foundUser);
@@ -61,7 +61,7 @@ export class UserserviceService {
        created_at:Date;
      }
      return new Promise<void>((resolve, reject)=>{
-       this.http.get<Repos>('https://api.githib.com/users/'+searchName+"/repos?order=created&sort=asc?access_token="+environment.apiKey).toPromise().then(
+       this.http.get<Repos>('https://api.githib.com/users/'+searchName+"/repos?order=created&sort=asc?access_token="+environment.apiToken).toPromise().then(
          (results: Repos)=>{
            this.allRepos = results;
            resolve();

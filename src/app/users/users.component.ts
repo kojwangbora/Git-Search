@@ -9,26 +9,27 @@ import { UserserviceService } from '../userservice.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  user: User;
-  repo: Repos
+  user!: User;
+  repo!: Repos;
 
   constructor( public myService: UserserviceService, private repoService: UserserviceService) { }
 
-  searchs(searchName) {
+  searchs(searchName: string) {
     this.myService.searchUser(searchName).then(
-      (success)=>{
+      (_success)=>{
         this.user = this.myService.foundUser;
       },
       (error)=>{
         console.log(error)
       }
     );
-    this.repoService.getRepos(searchName).then(
-      (results)=>{
+    this.repoService.getRepository(searchName).then(
+
+      (_results: any)=>{
         this.repo = this.repoService.allRepos
         console.log(this.repo);
       },
-      (error)=>{
+      (error: any)=>{
         console.log(error);
       }
     );

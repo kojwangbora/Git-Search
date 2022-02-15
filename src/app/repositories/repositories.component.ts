@@ -13,7 +13,7 @@ export class RepositoriesComponent implements OnInit {
   constructor( public repoService:UserserviceService) { }
 
   repoSearch(searchName: string){
-    this.repoService.getRepos(searchName).then(
+    this.repoService.getRepository(searchName).then(
       (results: any)=>{
         this.repo=this.repoService.allRepos
         console.log(this.repo);
@@ -24,7 +24,7 @@ export class RepositoriesComponent implements OnInit {
     );
   }
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.repoSearch('kojwangbora');
   }
 
