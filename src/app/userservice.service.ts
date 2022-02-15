@@ -3,7 +3,6 @@ import { User } from './user';
 import { Repos} from './repos';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { error } from '@angular/compiler/src/util';
 
 
 
@@ -20,7 +19,7 @@ export class UserserviceService {
    }
    searchUser(searchName: string){
 
-    interface Responce {
+    interface ApiResponce {
       url: any;
       login: any;
       html_url: any;
@@ -32,9 +31,8 @@ export class UserserviceService {
       created_at:any;
 
     }
-
     return new Promise<void>((resolve, reject)=>{
-      this.http.get<Responce>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiKey).toPromise().then(
+      this.http.get<ApiResponce>('https://api.github.com/users/'+searchName+'?'+environment.apiKey).toPromise().then(
         (result:any)=>{
           this.foundUser = result;
           console.log(this.foundUser);
@@ -47,7 +45,7 @@ export class UserserviceService {
       );
     });
    }
-   getRepository(searchName: string){
+   getReopos(searchName: string){
      interface Repos{
        name:string;
        html_url:string;
@@ -58,7 +56,7 @@ export class UserserviceService {
        created_at:Date;
      }
      return new Promise<void>((resolve, reject)=>{
-       this.http.get<Repos>('https://api.githib.com/users/'+searchName+"/repos?order=created&sort=asc?access_token="+environment.apiKey).toPromise().then(
+       this.http.get<Repos>('https://api.githib.com/users/'+searchName+"?"+environment.apiKey).toPromise().then(
          (results: any)=>{
            this.allRepos = results;
            resolve();

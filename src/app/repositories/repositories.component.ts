@@ -14,7 +14,7 @@ export class RepositoriesComponent implements OnInit {
   constructor( public repoService:UserserviceService) { }
 
   repoSearch(searchName: string){
-    this.repoService.getRepository(searchName).then(
+    this.repoService.getReopos(searchName).then(
       (results: any)=>{
         this.repo=this.repoService.allRepos
         console.log(this.repo);
