@@ -37,7 +37,7 @@ export class UserserviceService {
     }
 
     return new Promise<void>((resolve, reject)=>{
-      this.http.get<Response>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiToken).toPromise().then(
+      this.http.get<Responce>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiToken).toPromise().then(
         (result:any)=>{
           this.foundUser = result;
           console.log(this.foundUser);
