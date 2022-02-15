@@ -53,7 +53,7 @@ Composed of two main components.
 
 ## Contact Information 
 
-If you have any question or contributions, please email me at [mikeycharlesm7@gmail.com]
+If you have any question or contributions, please email me at [kojwangbora254@gmail.com]
 
 ## License
 * *MIT License:*
