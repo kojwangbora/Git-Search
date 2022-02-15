@@ -1,4 +1,4 @@
-import { Repos } from '../repos';
+import { Repo } from '../repos';
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
 
@@ -8,7 +8,7 @@ import { UserserviceService } from '../userservice.service';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-  repo!: Repos;
+  repo: any;
 
   constructor( public repoService:UserserviceService) { }
 

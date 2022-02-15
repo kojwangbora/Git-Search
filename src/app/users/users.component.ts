@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Repos } from '../repos';
+import { Repo } from '../repos';
 import { User } from '../user';
 import { UserserviceService } from '../userservice.service';
 
@@ -10,7 +10,7 @@ import { UserserviceService } from '../userservice.service';
 })
 export class UsersComponent implements OnInit {
   user!: User;
-  repo!: Repos;
+  repos: any;
 
   constructor( public myService: UserserviceService, private repoService: UserserviceService) { }
 
@@ -26,8 +26,8 @@ export class UsersComponent implements OnInit {
     this.repoService.getRepository(searchName).then(
 
       (_results: any)=>{
-        this.repo = this.repoService.allRepos
-        console.log(this.repo);
+        this.repos = this.repoService.allRepos
+        console.log(this.repos);
       },
       (error: any)=>{
         console.log(error);

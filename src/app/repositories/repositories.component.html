@@ -2,22 +2,22 @@
     <div class="container">
         <app-search-form (searchOutput)= "repoSearch($event)"></app-search-form>
         <div class="container allrepos">
-            <div class="card" appHiglight *ngFor="let repository of repo" style="width: 400px;" class="repo">
+            <div class="card" appHiglight *ngFor="let repo of repo" style="width: 400px;" class="repo">
                 <div class="card-body">
-                    <h4> Repository Name: &nbsp;{{repository.name}}</h4>
+                    <h4> Repository Name: &nbsp;{{repo.name}}</h4>
                     <hr>
-                    <div class="describe-repo"><strong>Description:</strong>&nbsp;{{repository.description}}</div>
+                    <div class="describe-repo"><strong>Description:</strong>&nbsp;{{repo.description}}</div>
                     <hr>
-                    <h4>Crated On: &nbsp;{{repository.created_at|date}}</h4>
+                    <h4>Crated On: &nbsp;{{repo.created_at|date}}</h4>
                     <div class="card-footer">
                         <div class="btn-group" role="group" aria-label="Third group">
-                          <button class="btn btn-sm btn-info"><i class="fa fa-eye" style="font-size:16px"></i> &nbsp;<span class="forks">{{repository.watchers_count}}</span></button>
+                          <button class="btn btn-sm btn-info"><i class="fa fa-eye" style="font-size:16px"></i> &nbsp;<span class="forks">{{repo.watchers_count}}</span></button>
                         </div>
                         <div class="btn-group" role="group" aria-label="Third group">
-                          <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork" style="font-size:16px"></i> &nbsp;<span class="forks">{{repository.forks}}</span></button>
+                          <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork" style="font-size:16px"></i> &nbsp;<span class="forks">{{repo.forks}}</span></button>
                         </div>
                         <div class="btn-group" role="group" aria-label="Third group">
-                          <button class="btn btn-sm btn-success" id="visit"><a href="{{repository.html_url}}" class="card-link">VIEW &nbsp; <i class="fa fa-arrow-circle-right" style="font-size:16px"></i></a> </button> 
+                          <button class="btn btn-sm btn-success" id="visit"><a href="{{repo.html_url}}" class="card-link">VIEW &nbsp; </a> </button> 
                         </div>
                 </div>
             </div>
