@@ -47,7 +47,7 @@ export class UserserviceService {
     });
    }
    getReopos(searchName: string){
-     interface Repos{
+     interface ApiResponce{
        name:string;
        html_url:string;
        description:string;
@@ -57,7 +57,7 @@ export class UserserviceService {
        created_at:Date;
      }
      return new Promise<void>((resolve, reject)=>{
-       this.http.get<Repos>('https://api.githib.com/users/'+searchName+"?"+environment.apiKey).toPromise().then(
+       this.http.get<ApiResponce>('https://api.githib.com/users/'+searchName+"?"+environment.apiKey).toPromise().then(
          (results: any)=>{
            this.allRepos = results;
            resolve();
