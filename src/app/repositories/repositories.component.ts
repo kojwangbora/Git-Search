@@ -1,4 +1,3 @@
-import { Repo } from '../repos';
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
 
