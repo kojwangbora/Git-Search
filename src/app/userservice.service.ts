@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Repos} from './repos';
@@ -28,7 +29,7 @@ export class UserserviceService {
       followers:any;
       following:any;
       avatar_url:any;
-      created_at:any;
+      created_at:Date;
 
     }
     return new Promise<void>((resolve, reject)=>{

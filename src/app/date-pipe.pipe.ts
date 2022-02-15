@@ -23,9 +23,9 @@ export class DatePipePipe implements PipeTransform {
         counter = Math.floor(seconds / intervals[i].time);
         if (counter > 0)
         if (counter === 1) {
-          return counter + ' ' + i + ' ago';
+          return counter + ' ' + intervals[i].name + ' ago';
         } else {
-          return counter + ' ' + i + 's ago';
+          return counter + ' ' + intervals[i].name + 's ago';
         }
       }
     }
