@@ -18,7 +18,7 @@
                         <div class="card-body">
                             <h4 class="Gs">Git-Search:<span>{{user.login}}</span></h4>
                             <hr>
-                            <h6> Repositories: <span class="follow">{{user.public_repos}}</span></h6>
+                            <h6> Repositories: <span class="follow"><strong class="bg-danger"> {{user.public_repos}} </strong> </span></h6>
                             <hr>
                             <h6>Following: <span class="follow">{{user.following}}</span></h6>
                             <hr>
@@ -34,14 +34,14 @@
         <div class="text-center repos mt-3" id="repositories">
             <h3>Repositories</h3>
         </div>
-        <div class="container allrepos">
-        <div class="card" appHighlight *ngFor="let repository of repo" style="width: 20rem;" class="repo">
+        <div class="container allrepos" id="reppos">
+        <div class="card" appHighlight *ngFor="let repository of repo" style="width: 35rem;" class="repo bg-secondary">
             <div class="card-body">
                 <h4 class="card-title"> Repo Name &nbsp; {{ repository.name}}</h4>
                 <hr>
-                <h5 class="describe-repo"><strong>Description</strong>{{repository.description}}</h5>
-                <h5>Language: {{repository.language}}</h5>
-                <h5>Created&nbsp; <span id="created">{{repository.created_at | datePipe}} &nbsp;  On:</span> &nbsp;{{repository.created_at | date}}</h5>
+                <h5 class="describe-repo mb-2"><strong>Description</strong>{{repository.description}}</h5>
+                <h5> <strong>Language:</strong> {{repository.language}}</h5>
+                <h5> <strong> Created  </strong> &nbsp; <span id="created">{{repository.created_at | datePipe}} &nbsp; <strong> On</strong>:</span> &nbsp;{{repository.created_at | date}}</h5>
                 <div class="card-footer">
 
                     <div class="btn-group" role="group" aria-label="Third group">
@@ -55,6 +55,7 @@
                     </div>
 
                 </div>
+                <hr>
             </div>
         </div>
     </div>

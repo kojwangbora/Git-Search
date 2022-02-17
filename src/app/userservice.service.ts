@@ -56,8 +56,16 @@ export class UserserviceService {
        language:string;
        created_at:Date;
      }
+    //  let repourl= `https://api.github.com/users/${searchName}/repos?${environment.apiKey}`;
+    //  let promise = new Promise<void>((resolve, reject)=>{
+    //    this.http.get<ApiResponce>(repourl)
+    //     .toPromise().then(
+
+    //    )
+    //  })
      return new Promise<void>((resolve, reject)=>{
-       this.http.get<Repos>('https://api.githib.com/users/'+searchName+"?"+environment.apiKey).toPromise().then(
+      // this.http.get<Repos>`https://api.github.com/users/${searchName}/repos?${environment.apiKey}`
+       this.http.get<Repos>(`https:api.github.com/users/${searchName}/repos?${environment.apiKey}`).toPromise().then(
          (results: any)=>{
            this.allRepos = results;
            resolve();

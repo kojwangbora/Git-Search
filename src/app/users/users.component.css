@@ -14,3 +14,19 @@
     margin-left: 10%;
     /* background-color: ; */
 }
+.allrepos{
+    width: 4000px;
+    flex-wrap: wrap;
+    display: flex;
+    /* flex: auto; */
+    padding-right: 2%;
+     
+}
+.repo{
+    margin-right: 3%;
+    margin-bottom: 2%;
+}
+.btn-group{
+    margin-right: 3%;
+}
+ 
